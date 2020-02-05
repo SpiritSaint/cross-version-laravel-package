@@ -9,48 +9,48 @@ jobs:
   dist: trusty
   php:
     - '5.4'
-  script:
+  before_install:
     - composer require laravel/laravel:4.2
 - language: php
   os: linux
   dist: trusty
   php:
     - '5.4'
-  script:
+  before_install:
     - composer require laravel/laravel:5.0
 - language: php
   os: linux
   dist: trusty
   php:
     - '5.5'
-  script:
+  before_install:
     - composer require laravel/laravel:5.1
 - language: php
   os: linux
   dist: trusty
   php:
     - '5.5'
-  script:
+  before_install:
     - composer require laravel/laravel:5.2
 - language: php
   os: linux
   dist: trusty
   php:
     - '5.6'
-  script:
+  before_install:
     - composer require laravel/laravel:5.3
 - language: php
   os: linux
   dist: trusty
   php:
     - '5.6'
-  script:
+  before_install:
     - composer require laravel/laravel:5.4
 - language: php
   os: linux
   php:
     - '7.0'
-  script:
+  before_install:
     - composer require laravel/laravel:5.5
 
 sudo: false
@@ -67,6 +67,4 @@ install:
   - COMPOSER_DISCARD_CHANGES=1 composer install --prefer-source --no-interaction
 
 script:
-  - composer require illuminate/support
-  - composer require phpunit/phpunit
   - vendor/bin/phpunit
