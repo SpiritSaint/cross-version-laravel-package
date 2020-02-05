@@ -13,8 +13,10 @@
         "php": ">=5.4"
     },
     "require-dev": {
+        "laravel/laravel": "*",
         "illuminate/support": "*",
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "*",
+        "orchestra/testbench": "*"
     }
 }
 
