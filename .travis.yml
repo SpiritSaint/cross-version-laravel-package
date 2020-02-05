@@ -10,55 +10,55 @@ jobs:
   php:
     - '5.4'
   before_install:
-    - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-    - composer require laravel/laravel:^4.2
+    - echo "memory_limit=4G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+    - COMPOSER_MEMORY_LIMIT=-1 composer require laravel/laravel:^4.2
 - language: php
   os: linux
   dist: trusty
   php:
     - '5.4'
   before_install:
-    - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-    - composer require laravel/laravel:^5.0
+    - echo "memory_limit=4G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+    - COMPOSER_MEMORY_LIMIT=-1 composer require laravel/laravel:^5.0
 - language: php
   os: linux
   dist: trusty
   php:
     - '5.5'
   before_install:
-    - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-    - composer require laravel/laravel:^5.1
+    - echo "memory_limit=4G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+    - COMPOSER_MEMORY_LIMIT=-1 composer require laravel/laravel:^5.1
 - language: php
   os: linux
   dist: trusty
   php:
     - '5.5'
   before_install:
-    - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-    - composer require laravel/laravel:^5.2
+    - echo "memory_limit=4G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+    - COMPOSER_MEMORY_LIMIT=-1 composer require laravel/laravel:^5.2
 - language: php
   os: linux
   dist: trusty
   php:
     - '5.6'
   before_install:
-    - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-    - composer require laravel/laravel:^5.3
+    - echo "memory_limit=4G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+    - COMPOSER_MEMORY_LIMIT=-1 composer require laravel/laravel:^5.3
 - language: php
   os: linux
   dist: trusty
   php:
     - '5.6'
   before_install:
-    - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-    - composer require laravel/laravel:^5.4
+    - echo "memory_limit=4G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+    - COMPOSER_MEMORY_LIMIT=-1 composer require laravel/laravel:^5.4
 - language: php
   os: linux
   php:
     - '7.0'
   before_install:
-    - echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-    - composer require laravel/laravel:^5.5
+    - echo "memory_limit=4G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+    - COMPOSER_MEMORY_LIMIT=-1 composer require laravel/laravel:^5.5
 
 sudo: false
 
