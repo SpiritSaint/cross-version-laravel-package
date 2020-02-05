@@ -3,6 +3,12 @@ language: php
 services:
   - mysql
 
+branches:
+- master
+- 5.1
+- 5.2
+- 5.3
+
 php:
   - 5.6
   - 7.0
