@@ -11,10 +11,6 @@
     ],
     "require": {
         "php": ">=5.4"
-    },
-    "require-dev": {
-        "illuminate/support": "*",
-        "phpunit/phpunit": "*"
     }
 }
 

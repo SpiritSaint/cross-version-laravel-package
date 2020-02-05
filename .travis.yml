@@ -64,4 +64,6 @@ install:
   - COMPOSER_DISCARD_CHANGES=1 composer install --prefer-source --no-interaction
 
 script:
+  - composer require illuminate/support
+  - composer require phpunit/phpunit
   - vendor/bin/phpunit
