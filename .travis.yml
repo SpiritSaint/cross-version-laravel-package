@@ -3,19 +3,49 @@ language: php
 services:
   - mysql
 
-branches:
-- master
-- 5.1
-- 5.2
-- 5.3
-
-php:
-  - 5.6
-  - 7.0
-  - 7.1
-  - 7.2
-  - 7.3
-  - 7.4
+jobs:
+- language: php
+  os: linux
+  php:
+    - 5.4
+  script:
+    - composer require laravel/laravel:4.2
+- language: php
+  os: linux
+  php:
+    - 5.4
+  script:
+    - composer require laravel/laravel:5.0
+- language: php
+  os: linux
+  php:
+    - 5.5
+  script:
+    - composer require laravel/laravel:5.1
+- language: php
+  os: linux
+  php:
+    - 5.5
+  script:
+    - composer require laravel/laravel:5.2
+- language: php
+  os: linux
+  php:
+    - 5.6
+  script:
+    - composer require laravel/laravel:5.3
+- language: php
+  os: linux
+  php:
+    - 5.6
+  script:
+    - composer require laravel/laravel:5.4
+- language: php
+  os: linux
+  php:
+    - 7.0
+  script:
+    - composer require laravel/laravel:5.5
 
 sudo: false
 
