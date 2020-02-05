@@ -55,6 +55,11 @@ jobs:
 
 sudo: false
 
+cache:
+  directories:
+    - vendor
+    - $HOME/.composer/cache
+
 install:
   - COMPOSER_DISCARD_CHANGES=1 composer install --prefer-source --no-interaction
 
