@@ -1,0 +1,13 @@
+{
+    "name": "demency/cross-version-laravel-package",
+    "description": "Cross version Laravel package",
+    "keywords": ["laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ian Torres",
+            "email": "iantorres@outlook.com"
+        }
+    ]
+}
+
