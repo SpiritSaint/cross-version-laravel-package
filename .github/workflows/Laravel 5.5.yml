@@ -1,0 +1,26 @@
+name: Laravel 5.5
+
+on: [push]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        php: [7.0, 7.1, 7.2, 7.3, 7.4]
+    name: "Laravel 5.5"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+      - name: Install Laravel
+        run: COMPOSER_MEMORY_LIMIT=-1 composer require laravel/laravel:^$LARAVEL_VERSION
+        env:
+          LARAVEL_VERSION: '5.5'
+      - name: Install PHPUnit
+        run: COMPOSER_MEMORY_LIMIT=-1 composer require phpunit/phpunit
+      - name: Run Tests
+        run: vendor/bin/phpunit

@@ -1,10 +1,13 @@
-name: Laravel 5.1 and PHP 5.5
+name: Laravel 5.8
 
 on: [push]
 
 jobs:
   build:
-    name: "Laravel 5.1 and PHP 5.5"
+    strategy:
+      matrix:
+        php: [7.1, 7.2, 7.3, 7.4]
+    name: "Laravel 5.8"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -12,11 +15,11 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '5.5'
+          php-version: ${{ matrix.php }}
       - name: Install Laravel
         run: COMPOSER_MEMORY_LIMIT=-1 composer require laravel/laravel:^$LARAVEL_VERSION
         env:
-          LARAVEL_VERSION: '5.1'
+          LARAVEL_VERSION: '5.8'
       - name: Install PHPUnit
         run: COMPOSER_MEMORY_LIMIT=-1 composer require phpunit/phpunit
       - name: Run Tests
