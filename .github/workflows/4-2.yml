@@ -16,4 +16,4 @@ jobs:
         env:
           LARAVEL_VERSION: '4.2'
       - name: Run Tests
-          run: vendor/bin/phpunit
+        run: vendor/bin/phpunit
