@@ -1,0 +1,19 @@
+name: 4.2
+
+on: [push]
+
+jobs:
+  build:
+    name: "Build package for Laravel 4.2 and PHP 5.4"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '5.4'
+      - name: Require Laravel
+        run: COMPOSER_MEMORY_LIMIT=-1 composer require laravel/laravel:^$LARAVEL_VERSION
+        env:
+          LARAVEL_VERSION: '4.2'
+      - name: Run Tests
+          run: vendor/bin/phpunit
